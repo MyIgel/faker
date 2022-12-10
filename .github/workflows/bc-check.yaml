@@ -22,5 +22,5 @@ jobs:
           image: "nyholm/roave-bc-check-ga"
           options: "-v ${{ github.workspace }}:/app"
           run: |
-            git config --global --add safe.directory /github/workspace
+            git config --global --add safe.directory /app
             /entrypoint.sh
