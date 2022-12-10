@@ -20,7 +20,5 @@ jobs:
         uses: "addnab/docker-run-action@v3"
         with:
           image: "nyholm/roave-bc-check-ga"
-          options: "-v ${{ github.workspace }}:/app"
-          run: |
-            git config --global --add safe.directory /app
-            /entrypoint.sh
+          options: "-v ${{ github.workspace }}:/app -u $(id -u):$(id -g)"
+          run: /entrypoint.sh
