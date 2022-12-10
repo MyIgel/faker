@@ -363,7 +363,7 @@ class Base
         return implode('', static::shuffleArray($array));
     }
 
-    private static function replaceWildcard($string, $wildcard = '#', $callback = static::class . '::randomDigit')
+    private static function replaceWildcard($string, $wildcard, $callback)
     {
         if (($pos = strpos($string, $wildcard)) === false) {
             return $string;
