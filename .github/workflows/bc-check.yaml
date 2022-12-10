@@ -19,5 +19,7 @@ jobs:
       - name: "Roave BC Check"
         uses: "docker://nyholm/roave-bc-check-ga"
         run: |
-          git config --global --add safe.directory /github/workspace
-          /entrypoint.sh
+          docker run --rm --workdir /github/workspace -e GITHUB_ACTIONS=true -e CI=true -v "$PWD":"/github/workspace" --entrypoint ash nyholm/roave-bc-check-ga -c '
+            git config --global --add safe.directory /github/workspace
+            /entrypoint.sh
+          '
