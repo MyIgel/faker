@@ -21,4 +21,4 @@ jobs:
         with:
           image: "nyholm/roave-bc-check-ga"
           options: "-v ${{ github.workspace }}:/app -u 1001"
-          run: "/entrypoint.sh"
+          run: "pwd; ls -al; cat .git/config; /entrypoint.sh"
