@@ -20,5 +20,5 @@ jobs:
         uses: "addnab/docker-run-action@v3"
         with:
           image: "nyholm/roave-bc-check-ga"
-          options: "-v ${{ github.workspace }}:/app -u 1000"
-          run: "/entrypoint.sh"
+          options: "-v ${{ github.workspace }}:/app"
+          run: "id; ls -al /app; /entrypoint.sh"
