@@ -139,10 +139,8 @@
     </UndefinedDocblockClass>
   </file>
   <file src="src/Faker/Provider/Base.php">
-    <InvalidArgument occurrences="3">
-      <code>static::class . '::randomAscii'</code>
-      <code>static::class . '::randomDigit'</code>
-      <code>static::class . '::randomLetter'</code>
+    <InvalidArgument occurrences="1">
+      <code>[static::class, 'randomDigit']</code>
     </InvalidArgument>
     <NoValue occurrences="1">
       <code>$array</code>
@@ -190,12 +188,6 @@
       <code>static::birthNumber(static::GENDER_FEMALE)</code>
       <code>static::birthNumber(static::GENDER_MALE)</code>
     </NonStaticSelfCall>
-  </file>
-  <file src="src/Faker/Provider/en_CA/Address.php">
-    <InvalidArgument occurrences="2">
-      <code>static::class . '::randomDigit'</code>
-      <code>static::class . '::randomPostcodeLetter'</code>
-    </InvalidArgument>
   </file>
   <file src="src/Faker/Provider/en_SG/Person.php">
     <InvalidArrayOffset occurrences="1">
