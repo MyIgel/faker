@@ -19,4 +19,4 @@ jobs:
       - name: "Roave BC Check"
         uses: "docker://nyholm/roave-bc-check-ga"
         env:
-          GIT_CEILING_DIRECTORIES: "/github/workspace"
+          GIT_CEILING_DIRECTORIES: "/github"
