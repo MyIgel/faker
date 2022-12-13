@@ -20,5 +20,5 @@ jobs:
         uses: "addnab/docker-run-action@v3"
         with:
           image: "nyholm/roave-bc-check-ga"
-          options: "--volume ${{ github.workspace }}:/app --user 1001 --env GITHUB_REPOSITORY=${{ github.repository }}"
+          options: "--env GITHUB_REPOSITORY=${{ github.repository }} --user 1001 --volume ${{ github.workspace }}:/app"
           run: "/entrypoint.sh"
